@@ -1,6 +1,6 @@
 const LoginPage = () => {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-lg w-80">
+    <div className="bg-white rounded-lg shadow-lg w-80">
       <h2 className="text-2xl font-bold text-center mb-6">Login</h2>
 
       <button className="w-full flex items-center justify-center bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded mb-3">
