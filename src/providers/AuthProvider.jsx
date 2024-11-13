@@ -10,6 +10,7 @@ import {
   signInWithPopup,
   signOut,
   TwitterAuthProvider,
+  updateProfile,
 } from "firebase/auth";
 import PropTypes from "prop-types";
 
@@ -28,6 +29,10 @@ const AuthProvider = ({ children }) => {
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
+  };
+  const addDetails = (profile) => {
+    setLoading(true);
+    return updateProfile(auth.currentUser, profile);
   };
 
   // Login user
@@ -85,6 +90,7 @@ const AuthProvider = ({ children }) => {
     signInWithGithub,
     loading,
     user,
+    addDetails,
   };
   return (
     <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>

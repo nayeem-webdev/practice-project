@@ -8,7 +8,7 @@ const Navbar = () => {
     <header className="bg-gray-800 text-white py-4 shadow-md p-5">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center w-1/3 ">
-          <span className="font-bold text-xl">FIREBASE</span>
+          <span className="font-bold text-xl">🔥FIREBASE</span>
         </div>
         <div className="space-x-4 w-1/3  items-center justify-center flex">
           {user && (
@@ -52,11 +52,13 @@ const Navbar = () => {
               </span>
               <span className="text-white">{user?.email}</span>
             </div>
-            <img
-              src={user?.photoURL}
-              alt="User Profile"
-              className="w-10 h-10 rounded-full"
-            />
+            {user && (
+              <img
+                src={user?.photoURL}
+                alt="User Profile"
+                className="w-10 h-10 rounded-full"
+              />
+            )}
           </div>
         </div>
       </div>
